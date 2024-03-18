@@ -1,12 +1,12 @@
 
 import { useForm } from "react-hook-form";
 
-const SignUp = (ToggleForm) => {
+const SignUp = ({ ToggleForm }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
       const jsonData = JSON.stringify(data);
       localStorage.setItem('formData', jsonData);
-      ToggleForm()
+      ToggleForm();
       // console.log(localStorage.setItem('formData', jsonData));
     };
     // console.log(errorst4);
